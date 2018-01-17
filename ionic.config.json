@@ -1,0 +1,8 @@
+{
+  "name": "TDSGram",
+  "app_id": "c12d60ad",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
