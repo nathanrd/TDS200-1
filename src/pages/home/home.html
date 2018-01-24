@@ -7,8 +7,38 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card *ngFor="let post of posts">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{post.avatar}}">
+      </ion-avatar>
+      <h2>{{post.name}}</h2>
+      <p>{{post.date}}</p>
+    </ion-item>
+
+    <img src="{{post.img}}">
+    <ion-card-content>
+      <p>{{post.text}}</p>
+    </ion-card-content>
+
+    <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>{{post.likes}} Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>{{post.comments}} Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+  </ion-card>
 </ion-content>
